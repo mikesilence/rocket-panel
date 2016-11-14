@@ -5,19 +5,22 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const AssetsPlugin = require('assets-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const precss = require('precss');
 
 module.exports = {
   entry:  {
     application: [
       path.resolve(__dirname, 'application', 'assets', 'sass', 'index.sass'),
-      path.resolve(__dirname, 'application', 'assets', 'js', 'index.js'),
+      path.resolve(__dirname, 'application', 'assets', 'js', 'index'),
     ]
   },
+
   output: {
     path: path.resolve(__dirname, 'application', 'static'),
     publicPath: '../',
     filename: '[name]/[name].js'
   },
+
   resolve: {
     moduleDirectories: ['node_modules'],
     root: path.resolve(__dirname, 'assets'),
@@ -28,6 +31,7 @@ module.exports = {
       _js: 'js',
     },
   },
+
   module: {
     loaders: [{
       test: /\.js$/,
@@ -38,21 +42,19 @@ module.exports = {
       test: /\.(eot|woff|woff2|ttf|png|jpg|gif|svg)$/,
       loader: 'url?name=[name]/[hash].[ext]&limit=5000',
     }, {
-      test: /\.(css|sass)$/,
-      loader: ExtractTextPlugin.extract('css!postcss-loader?sass?sourceMap&indentedSyntax'),
+      test: /\.(sass|css)$/,
+      loader: ExtractTextPlugin.extract('css!postcss!sass'),
     }],
   },
 
   postcss: [
     autoprefixer({
-      browsers: "last 3 versions"
+      browsers: "last 5 versions"
     })
   ],
 
   debug: true,
-
   watch: true,
-
   devtool: 'source-map',
 
   plugins: [

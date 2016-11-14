@@ -44,12 +44,17 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	(function webpackMissingModule() { throw new Error("Cannot find module \"/Users/mikesilence/Documents/web-applications/rocket-panel/application/assets/sass/index.sass\""); }());
+	__webpack_require__(1);
 	module.exports = __webpack_require__(2);
 
 
 /***/ },
-/* 1 */,
+/* 1 */
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
+
+/***/ },
 /* 2 */
 /***/ function(module, exports, __webpack_require__) {
 

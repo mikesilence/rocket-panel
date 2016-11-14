@@ -1,0 +1,26 @@
+.test {
+  height: 20px;
+  width: 100%;
+  background: blue;
+  background-size: cover;
+  border-radius: 1px solid green; }
+  .test:-webkit-full-screen a {
+    display: -webkit-flex;
+    display: flex; }
+  .test:-moz-full-screen a {
+    display: flex; }
+  .test:-ms-fullscreen a {
+    display: -ms-flexbox;
+    display: flex; }
+  .test:fullscreen a {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.item {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: calc(100% - 3em); }
+
+/*# sourceMappingURL=application.css.map*/
