@@ -25,6 +25,7 @@ module.exports = {
     moduleDirectories: ['node_modules'],
     root: path.resolve(__dirname, 'assets'),
     alias: {
+      _actions: 'js/actions'
       _fonts: 'fonts',
       _images: 'images',
       _scss: 'scss',

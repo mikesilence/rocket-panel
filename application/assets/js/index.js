@@ -1,3 +1,5 @@
 'use strict';
 
-require('./test');
+import React, { Component } from 'react';
+import { combineReducers } from 'redux';
+import { Provider } from 'react-redux';
